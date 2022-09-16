@@ -17,6 +17,13 @@
 	<sonar.login>admin</sonar.login>
 	<sonar.password>admin</sonar.password>
     </properties>
+<distributionManagement>
+	<repository>
+	    <id>nexus</id>
+	    <name>Acada Learning Releases Nexus Repository</name>
+	    <url>http://18.118.22.68:8081/repository/addressbook_release//</url>
+        </repository>
+</distributionManagement>
 
     <repositories>
 	<repository>    
@@ -24,11 +31,7 @@
             <name>Vaadin Pre-releases</name>
             <url>https://maven.vaadin.com/vaadin-prereleases</url>
 	</repository>    
-        <repository>
-	    <id>nexus</id>
-	    <name>Acada Learning Releases Nexus Repository</name>
-	    <url>http://18.118.22.68:8081/repository/addressbook_release//</url>
-        </repository>
+       
         <!-- Essential Vaadin artifacts are in maven central, but maven.vaadin.com 
             contains a huge set of additional libraries. See vaadin.com/directory -->
        <repository>
