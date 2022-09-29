@@ -42,10 +42,10 @@ stages{
         }
     }
     
-    //stage('DeployToProd'){
+    stage('DeployToProd'){
         steps{
             sh "echo deploying to production"
-            deploy adapters: [tomcat9(credentialsId: '7d25a1f2-5d3c-46b5-9cae-9b46dd5eb759', path: '', url: 'http://52.15.127.123:8080/')], contextPath: null, war: 'target/*war'
+            //deploy adapters: [tomcat9(credentialsId: '7d25a1f2-5d3c-46b5-9cae-9b46dd5eb759', path: '', url: 'http://52.15.127.123:8080/')], contextPath: null, war: 'target/*war'
             
         }
     }
