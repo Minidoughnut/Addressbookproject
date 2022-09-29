@@ -7,7 +7,7 @@ stages{
     stage('GitClone'){
         steps{
             sh "echo Git clone"
-            git 'https://github.com/Minidoughnut/maven-web-app.git'
+            git 'https://github.com/Minidoughnut/Addressbookproject.git'
             
         }
     }
@@ -49,5 +49,14 @@ stages{
             
         }
     }
-} 
+    
+    
+    stage('SlackNotice'){
+        steps{
+           sh "sending msg to slack"
+                slackSend channel: 'training', message: 'Build notification'
+                }
+                }
+
+}
 }
